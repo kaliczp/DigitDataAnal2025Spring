@@ -31,3 +31,5 @@ str(e)
 str(Mt)
 str(Mt.df)
 Mt.df$V1 # First column (variable) of Mt.df object
+
+dir() # List the content of the working directory (folder)
