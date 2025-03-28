@@ -32,4 +32,6 @@ str(Mt)
 str(Mt.df)
 Mt.df$V1 # First column (variable) of Mt.df object
 
-dir() # List the content of the working directory (folder)
+dir() # List the files from the working directory (folder)
+## Import file
+read.csv("Soil Data_Alshfa.csv")
