@@ -21,7 +21,7 @@ Mt <- diag(10) # Create an object from matrix above
 ls() # list of object
 Mt # print the content of Mt object
 Mt[1,1] # Element in 1st row and 1st columnt
-Mt[1,3] # Elemnet in 1st row and 3rd column
+Mt[1,3] # Element in 1st row and 3rd column
 as.character(1) # A number converted to character
 as.data.frame(Mt) # The matrix saved into Mt is converted to data.frame
 Mt.df <- as.data.frame(Mt) # ... and saved into Mt.df object
@@ -34,4 +34,5 @@ Mt.df$V1 # First column (variable) of Mt.df object
 
 dir() # List the files from the working directory (folder)
 ## Import file
-Soil.df <- read.csv("Soil Data_Alshfa.csv")
+Soil.df <- read.csv("Soil Data_Alshfa.csv") # Save data into object called Soil.df
+NA # Not Available
