@@ -45,3 +45,9 @@ Soil.df[,5] # Only fifth column
 sum(Soil.df[,5]) # sum of all element in the 5th column
 sum(Soil.df[,5], na.rm = TRUE) / 7 # Calculate the mean
 TRUE;FALSE # The two possible logical values this is not character, this has special meaning
+mean(Soil.df[,5], na.rm = TRUE) # Calculation of the mean with function
+mean(Soil.df$CaCO3..., na.rm = TRUE) # Same as above but indexing
+plot(Soil.df) # Scatter-plot matrix
+plot(Soil.df$X,Soil.df$Y, asp = TRUE) # There is an extra point
+Soil.df[,2:3] # Cearly identifiable 2nd is wrong
+plot(Y ~ X, Soil.df[-2, c("X","Y")], asp = TRUE) # 2nd row removed an X and Y columns are used, with tilde (~) axies assigned
