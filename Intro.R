@@ -1,5 +1,5 @@
 ## Creat an empty folder!
-## Change in R the working directory
+## Change in R the working directory In windows File -> Change dir..
 ## Check it!
 getwd() # Print actual working directory
 help(getwd) # Read the manual!
@@ -33,11 +33,15 @@ str(Mt.df)
 Mt.df$V1 # First column (variable) of Mt.df object
 
 dir() # List the files from the working directory (folder)
+rm(list=ls()) # remove ALL the existing objects
+
 ## Import file
 Soil.df <- read.csv("Soil Data_Alshfa.csv") # Save data into object called Soil.df
 NA # Not Available
 str(Soil.df) # Overview of the new data.frame
+Soil.df # Write the name of the object to look the content
 summary(Soil.df)
 Soil.df[,5] # Only fifth column
 sum(Soil.df[,5]) # sum of all element in the 5th column
 sum(Soil.df[,5], na.rm = TRUE) / 7 # Calculate the mean
+TRUE;FALSE # The two possible logical values this is not character, this has special meaning
