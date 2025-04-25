@@ -60,3 +60,6 @@ summary(SoilOK.df) # Check again summary
 
 ## Export dataset
 write.csv(SoilOK.df, "SoilOK.csv")
+
+## Plots and export
+plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE)
