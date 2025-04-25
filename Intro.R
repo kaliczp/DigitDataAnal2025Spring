@@ -62,4 +62,8 @@ summary(SoilOK.df) # Check again summary
 write.csv(SoilOK.df, "SoilOK.csv")
 
 ## Plots and export
-plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE)
+plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE) # Plot OK dataset points with coordinates
+
+pdf() # Open a pdf file
+plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE) #Make plot
+dev.off() # Close file
