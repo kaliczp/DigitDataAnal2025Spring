@@ -68,6 +68,8 @@ pdf() # Open a pdf file
 plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE) #Make plot
 dev.off() # Close file
 
-jpeg() # Open a jpeg file
-plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE) #Make plot
+jpeg(width = 18, height = 18, units = "cm", res = 300) # Open a jpeg file
+plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE, xlab = "X", ylab = "Y", main = "Sampling points") #Make plot
+grid()
+points(SoilOK.df$X,SoilOK.df$Y)
 dev.off() # Close file
