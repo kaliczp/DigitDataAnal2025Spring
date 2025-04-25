@@ -69,7 +69,7 @@ plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE) #Make plot
 dev.off() # Close file
 
 jpeg(width = 18, height = 18, units = "cm", res = 300) # Open a jpeg file
-plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE, xlab = "X", ylab = "Y", main = "Sampling points") #Make plot
-grid()
-points(SoilOK.df$X,SoilOK.df$Y)
+plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE, xlab = "X", ylab = "Y", main = "Sampling points") # Make plot with custom labs a title
+grid() # Grid lines to better identifications
+points(SoilOK.df$X,SoilOK.df$Y, col = "brown", lwd = 3) # Overwrite the points to better points and color and line width modified
 dev.off() # Close file
