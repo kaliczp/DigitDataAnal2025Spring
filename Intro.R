@@ -79,3 +79,16 @@ dev.off() # Close file
 SoilOK.df[,c(9,11,12)] # Selected variables for comparison
 summary(SoilOK.df[,c(9,11,12)]) # Summary of selected variables
 boxplot(SoilOK.df[,c(9,11,12)]) # Graphical summary of variables
+
+## Regression
+plot(SoilOK.df) # Scatterplot matrix for variable selection
+plot(SAR ~ Na, data=SoilOK.df) # plot the selected variables
+lm(SAR ~ Na, data=SoilOK.df) # Linear model
+Model <- lm(SAR ~ Na, data=SoilOK.df) # Save result in an object
+str(Model) # See the structure of result
+Model$coefficients # Access list elements
+abline(Model) # visualise result
+summary(Model) # See summary
+plot(Model) # graphical tests
+
+## Generate artifical points
