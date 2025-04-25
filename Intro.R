@@ -55,4 +55,8 @@ plot(Y ~ X, Soil.df[-2, c("X","Y")], asp = TRUE) # 2nd row removed an X and Y co
 
 ## Manipulation of dataset
 Soil.df[2,3] <- 2158269 # Overwrite the wrong coordinate
-SoilOK.df <- Soil.df[1:7,]
+SoilOK.df <- Soil.df[1:7,] # Remove the empty rows
+summary(SoilOK.df) # Check again summary
+
+## Export dataset
+write.csv(SoilOK.df, "SoilOK.csv")
