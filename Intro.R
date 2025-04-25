@@ -74,3 +74,8 @@ grid() # Grid lines to better identifications
 points(SoilOK.df$X,SoilOK.df$Y, col = "brown", lwd = 3) # Overwrite the points to better points and color and line width modified
 text(SoilOK.df$X,SoilOK.df$Y, SoilOK.df$ID, adj = c(-0.5,0.5))
 dev.off() # Close file
+
+## Boxplot visualisation Tukey five numbers
+SoilOK.df[,c(9,11,12)] # Selected variables for comparison
+summary(SoilOK.df[,c(9,11,12)]) # Summary of selected variables
+boxplot(SoilOK.df[,c(9,11,12)]) # Graphical summary of variables
