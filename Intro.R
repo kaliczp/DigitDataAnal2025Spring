@@ -34,6 +34,7 @@ Mt.df$V1 # First column (variable) of Mt.df object
 
 dir() # List the files from the working directory (folder)
 rm(list=ls()) # remove ALL the existing objects
+help.start() # Open a browser window with help
 
 ## Import file
 Soil.df <- read.csv("Soil Data_Alshfa.csv") # Save data into object called Soil.df
