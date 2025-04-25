@@ -67,3 +67,7 @@ plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE) # Plot OK dataset points with coordina
 pdf() # Open a pdf file
 plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE) #Make plot
 dev.off() # Close file
+
+jpeg() # Open a jpeg file
+plot(SoilOK.df$X,SoilOK.df$Y, asp = TRUE) #Make plot
+dev.off() # Close file
