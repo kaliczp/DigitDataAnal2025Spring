@@ -104,9 +104,10 @@ Modelnoint <- lm(SAR ~ Na - 1, data=SoilOK.df)
 summary(Modelnoint)
 abline(Modelnoint, col = "blue")
 plot(Modelnoint)
+?plot.lm # Read manual of regression diagnostics plot
 
 ## Generate artifical points
 Gener.df <- data.frame(Na = sample(2:500, 50)) # Generate 50 random points between 2 and 500
-Gener.df$SAR <- Gener.df$Na * 0.2482 + 22 + rnorm(50, sd = 10) # Generate pairs based on regression
+Gener.df$SAR <- Gener.df$Na * 0.31566 + rnorm(50, sd = 10) # Generate pairs based on regression
 plot(SAR ~ Na, data = Gener.df, xlim = c(0,500), ylim = c(0,170)) # Plot generated data
 points(SAR ~ Na, data = SoilOK.df, col = "red", lwd = 3) # Put original point on it
