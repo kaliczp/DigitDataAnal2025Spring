@@ -97,7 +97,13 @@ points(x = 200, y = predict(Model, newdata=data.frame(Na = 200)), col = "red") #
 points(x = c(100,200,300), y = predict(Model, newdata=data.frame(Na = c(100,200,300)))) # More points
 abline(Model) # visualise result
 summary(Model) # See summary
+identify(SoilOK.df$Na, SoilOK.df$SAR) # Identify residuals
 plot(Model) # graphical tests
+## Model without intercept
+Modelnoint <- lm(SAR ~ Na - 1, data=SoilOK.df)
+summary(Modelnoint)
+abline(Modelnoint, col = "blue")
+plot(Modelnoint)
 
 ## Generate artifical points
 Gener.df <- data.frame(Na = sample(2:500, 50)) # Generate 50 random points between 2 and 500
