@@ -53,6 +53,10 @@ plot(Soil.df$X,Soil.df$Y, asp = TRUE) # There is an extra point
 Soil.df[,2:3] # Cearly identifiable 2nd is wrong
 plot(Y ~ X, Soil.df[-2, c("X","Y")], asp = TRUE) # 2nd row removed an X and Y columns are used, with tilde (~) axies assigned
 
+## Graphical identification of error
+locator(1) # Prints the coordinate of clicking in the graph
+identify(Soil.df$X,Soil.df$Y) # Identify the wrong coordinates
+
 ## Manipulation of dataset
 Soil.df[2,3] <- 2158269 # Overwrite the wrong coordinate
 SoilOK.df <- Soil.df[1:7,] # Remove the empty rows
