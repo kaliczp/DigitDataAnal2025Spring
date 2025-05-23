@@ -93,6 +93,8 @@ str(Model) # See the structure of result
 Model$coefficients # Access list elements
 Model$coefficients[1] + Model$coefficients[2] *200 # Predict SAR based on 200 cc of NA
 predict(Model, newdata=data.frame(Na = 200)) # Same prediction as above
+points(x = 200, y = predict(Model, newdata=data.frame(Na = 200)), col = "red") # See the prediction
+points(x = c(100,200,300), y = predict(Model, newdata=data.frame(Na = c(100,200,300)))) # More points
 abline(Model) # visualise result
 summary(Model) # See summary
 plot(Model) # graphical tests
