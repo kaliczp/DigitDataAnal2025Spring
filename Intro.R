@@ -91,6 +91,8 @@ lm(SAR ~ Na, data=SoilOK.df) # Linear model
 Model <- lm(SAR ~ Na, data=SoilOK.df) # Save result in an object
 str(Model) # See the structure of result
 Model$coefficients # Access list elements
+Model$coefficients[1] + Model$coefficients[2] *200 # Predict SAR based on 200 cc of NA
+predict(Model, newdata=data.frame(Na = 200)) # Same prediction as above
 abline(Model) # visualise result
 summary(Model) # See summary
 plot(Model) # graphical tests
