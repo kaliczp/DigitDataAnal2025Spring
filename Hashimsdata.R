@@ -12,3 +12,5 @@ WadElbashir[, "Species Type"] <- factor(WadElbashir[, "Species Type"])
 
 ## Visualisation
 plot(WadElbashir) # Scatterplot matrix
+plot(WadElbashir$E, WadElbashir$N, asp = TRUE) # Coordinates
+
