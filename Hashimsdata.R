@@ -23,13 +23,19 @@ identify(WadElbashir$E, WadElbashir$N) # Identify outliers
 WadElbashir[c(1, 71, 100), ] # Look at erroneous cordinate
 WadElbashir[70:103, 2:6] # Neighbours 71 duplication of 73, 102 of 100
 
-## Coordinate correction
+## Coordinate identification
 plot(WadElbashir[-c(71,100), 2:3], asp = TRUE) # Without errors
 WadOK <- WadElbashir[-c(71,100), ] # Save data withotu erroneous rows
 
+## Look at sample numbers
+plot(WadElbashir[-c(71,100), 2:3], asp = TRUE, col = "lightgray")
+text(WadElbashir[-c(71,100), 2:3], labels = WadElbashir[-c(71,100), 1])
+axis(2, at = 1496166, tck = 1)
+axis(1, at = 674583, tck = 1)
+
 plot(WadOK) # Scatterplot matrix again
 
-## Look at sample numbers
+## Look at sample numbers with corrected
 plot(WadOK[, 2:3], asp = TRUE, col = "lightgray")
 text(WadOK[, 2:3], labels = WadOK[, 1])
 
