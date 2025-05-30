@@ -19,3 +19,4 @@ plot(WadElbashir$E, WadElbashir$N, asp = TRUE) # Coordinates
 
 ## Find erroneous coordinates
 plot(WadElbashir$E, WadElbashir$N, asp = TRUE) # Coordinates
+identify(WadElbashir$E, WadElbashir$N) # Identify outliers
