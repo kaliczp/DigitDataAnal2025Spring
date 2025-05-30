@@ -39,3 +39,9 @@ plot(WadOK) # Scatterplot matrix again
 plot(WadOK[, 2:3], asp = TRUE, col = "lightgray")
 text(WadOK[, 2:3], labels = WadOK[, 1])
 
+## Small analysis
+plot(WadOK$DBH, WadOK$Hi) # Plot
+Wad.lm <- lm(Hi ~ DBH, data = WadOK) # lm
+abline(Wad.lm) # Visual result
+Wad.lm
+summary(Wad.lm) # No significant linear relationship
