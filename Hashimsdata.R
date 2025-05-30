@@ -45,3 +45,25 @@ Wad.lm <- lm(Hi ~ DBH, data = WadOK) # lm
 abline(Wad.lm) # Visual result
 Wad.lm
 summary(Wad.lm) # No significant linear relationship
+
+scatter.smooth(WadOK$DBH, WadOK$Hi) # Smoother
+## remove outlier diameter
+identify(WadOK$DBH, WadOK$Hi)
+
+WadDBHok <- WadOK[-41,] # Remove large DBH
+plot(WadDBHok$DBH, WadDBHok$Hi)
+scatter.smooth(WadDBHok$DBH, WadDBHok$Hi)
+
+## To save and reuse result
+WadDBHsmooth <- loess.smooth(WadDBHok$DBH, WadDBHok$Hi)
+lines(WadDBHsmooth, col = "brown", lwd =2)
+
+## Analysis of variance
+names(WadOK) <- c("SampleNo.", "N", "E", "DBH", "SpeciesType", "Hi", "Basel Area", "Volume", "Branches", "Crwon Dimeter")
+
+WadAOV <- aov(Volume ~ SpeciesType, data = WadOK)
+WadAOV
+summary(WadAOV) # Volume not depends on tree species
+
+WadAOV2 <- aov(Volume ~ SpeciesType + Branches, data = WadOK)
+summary(WadAOV2) # Volume are not influneced any of tow variables
