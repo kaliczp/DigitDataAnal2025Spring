@@ -9,3 +9,6 @@ str(WadElbashir)
 summary(WadElbashir)
 ## Convert tree species (categorical variable) to factor
 WadElbashir[, "Species Type"] <- factor(WadElbashir[, "Species Type"])
+
+## Visualisation
+plot(WadElbashir) # Scatterplot matrix
