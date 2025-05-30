@@ -17,3 +17,5 @@ plot(WadElbashir$DBH, WadElbashir$Hi) # Random relationship
 plot(WadElbashir$DBH, WadElbashir[,"Volum/m3"]) # Random relationship
 plot(WadElbashir$E, WadElbashir$N, asp = TRUE) # Coordinates
 
+## Find erroneous coordinates
+plot(WadElbashir$E, WadElbashir$N, asp = TRUE) # Coordinates
