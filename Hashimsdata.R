@@ -67,3 +67,13 @@ summary(WadAOV) # Volume not depends on tree species
 
 WadAOV2 <- aov(Volume ~ SpeciesType + Branches, data = WadOK)
 summary(WadAOV2) # Volume are not influneced any of tow variables
+
+## Without 41 row erroneous DBH
+names(WadDBHok) <- c("SampleNo.", "N", "E", "DBH", "SpeciesType", "Hi", "Basel Area", "Volume", "Branches", "Crwon Dimeter")
+
+WadAOV3 <- aov(Volume ~ SpeciesType, data = WadDBHok)
+summary(WadAOV3)
+plot(WadAOV3)
+
+WadAOV4 <- aov(Volume ~ SpeciesType + Branches, data = WadDBHok)
+summary(WadAOV4) # Volume are not influneced any of tow variables
