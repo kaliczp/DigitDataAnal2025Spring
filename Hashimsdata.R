@@ -25,3 +25,4 @@ WadElbashir[70:103, 2:6] # Neighbours 71 duplication of 73, 102 of 100
 
 ## Coordinate correction
 plot(WadElbashir[-c(71,100), 2:3], asp = TRUE) # Without errors
+WadOK <- WadElbashir[-c(71,100), ] # Save data withotu erroneous rows
