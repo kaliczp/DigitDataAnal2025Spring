@@ -21,3 +21,4 @@ plot(WadElbashir$E, WadElbashir$N, asp = TRUE) # Coordinates
 plot(WadElbashir$E, WadElbashir$N, asp = TRUE) # Coordinates
 identify(WadElbashir$E, WadElbashir$N) # Identify outliers
 WadElbashir[c(1, 71, 100), ] # Look at erroneous cordinate
+WadElbashir[70:103, 2:6] # Neighbours 71 duplication of 73, 102 of 100
