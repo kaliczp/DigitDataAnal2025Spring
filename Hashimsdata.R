@@ -26,3 +26,10 @@ WadElbashir[70:103, 2:6] # Neighbours 71 duplication of 73, 102 of 100
 ## Coordinate correction
 plot(WadElbashir[-c(71,100), 2:3], asp = TRUE) # Without errors
 WadOK <- WadElbashir[-c(71,100), ] # Save data withotu erroneous rows
+
+plot(WadOK) # Scatterplot matrix again
+
+## Look at sample numbers
+plot(WadOK[, 2:3], asp = TRUE, col = "lightgray")
+text(WadOK[, 2:3], labels = WadOK[, 1])
+
